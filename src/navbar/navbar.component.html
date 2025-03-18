@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <a href="#"><img src="./assets/images/logo.svg" alt="Brand logo" /></a>
+  <button class="hamburger" (click)="handleMenu()">
+    <img src="./assets/images/icon-menu.svg" alt="icon button to open menu" />
+  </button>
+  <div class="off-screen-menu" #menu>
+    <ul>
+      <button class="close-btn" (click)="handleMenu()">
+        <img
+          src="./assets/images/icon-menu-close.svg"
+          alt="icon button to close menu"
+        />
+      </button>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">New</a></li>
+      <li><a href="#">Popular</a></li>
+      <li><a href="#">Trending</a></li>
+      <li><a href="#">Categories</a></li>
+    </ul>
+  </div>
+</nav>

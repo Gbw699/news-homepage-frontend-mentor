@@ -1,0 +1,61 @@
+@use "../styles.scss" as s;
+
+.navbar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  a,
+  .hamburger {
+    margin: 0 1rem;
+    margin-top: 2rem;
+    background-color: transparent;
+    border: none;
+  }
+  .off-screen-menu {
+    position: fixed;
+    z-index: 2;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-color: transparent;
+    transform: translateX(200%);
+    transition: background-color 0.3s ease-in-out;
+    ul {
+      margin: 0;
+      list-style-type: none;
+      padding: 1.5rem;
+      width: 60%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      transform: translateX(200%);
+      transition: transform 0.6s ease-in-out;
+      .close-btn {
+        background-color: transparent;
+        border: none;
+        align-self: end;
+        width: fit-content;
+        margin-bottom: 6rem;
+      }
+      li {
+        a {
+          font-size: 1.3rem;
+          font-weight: 400;
+          color: s.$VeryDarkBlue;
+          text-decoration: none;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .open {
+    background-color: rgba($color: s.$VeryDarkBlue, $alpha: 0.5);
+    transform: translateX(0%);
+    ul {
+      transform: translateX(0%);
+    }
+  }
+}
