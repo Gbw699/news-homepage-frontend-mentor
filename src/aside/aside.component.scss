@@ -1,0 +1,28 @@
+@use "../styles.scss" as s;
+
+.container {
+  background-color: s.$VeryDarkBlue;
+  color: s.$GrayishBlue;
+  padding: 1.5rem 1rem;
+  margin: 5rem 1rem 0 1rem;
+  .title {
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 2rem;
+    color: s.$SoftOrange;
+  }
+  .sub-title {
+    font-weight: 700;
+    margin: 0;
+    color: s.$OffWhite;
+  }
+  .text {
+    margin: 0;
+    margin-top: 0.5rem;
+    line-height: 1.8rem;
+  }
+  hr {
+    border-color: s.$GrayishBlue;
+    margin: 2rem 0;
+  }
+}
