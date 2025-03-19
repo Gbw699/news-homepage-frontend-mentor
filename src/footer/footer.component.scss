@@ -1,0 +1,35 @@
+@use "../styles.scss" as s;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 5rem 1rem 5rem 1rem;
+  .grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1.5rem;
+    img {
+      grid-column: 1 / 2;
+      grid-row: 1 / 4;
+    }
+    .title {
+      color: s.$SoftRed;
+      font-size: 2rem;
+      margin: 0;
+      font-weight: 800;
+    }
+    .sub-title {
+      color: s.$VeryDarkBlue;
+      margin: 0;
+      font-weight: 800;
+    }
+    .text {
+      color: s.$DarkGrayishBlue;
+      text-wrap: balance;
+      margin: 0;
+    }
+  }
+}
