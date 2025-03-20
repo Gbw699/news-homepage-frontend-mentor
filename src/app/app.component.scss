@@ -1,1 +1,24 @@
+@use "../styles.scss" as s;
 
+div {
+  // max-width: 615px;
+  margin-bottom: 5rem;
+  @media (min-width: s.$MinWidth) {
+    max-width: 1090px;
+    margin-bottom: 0;
+  }
+  main {
+    @media (min-width: s.$MinWidth) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      app-main {
+        grid-column: 1 / span 2;
+        grid-row: 1 / 3;
+      }
+      app-aside {
+        grid-row: 1 / 3;
+      }
+    }
+  }
+}

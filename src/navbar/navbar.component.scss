@@ -5,12 +5,36 @@
   z-index: 1;
   display: flex;
   justify-content: space-between;
+  .desktop-menu {
+    display: none;
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      margin-top: 2rem;
+      li {
+        a {
+          color: s.$DarkGrayishBlue;
+          text-decoration: none;
+        }
+      }
+    }
+    @media (min-width: s.$MinWidth) {
+      display: block;
+      align-self: center;
+    }
+  }
   a,
   .hamburger {
     margin: 0 1rem;
     margin-top: 2rem;
     background-color: transparent;
     border: none;
+  }
+  .hamburger {
+    @media (min-width: s.$MinWidth) {
+      display: none;
+    }
   }
   .off-screen-menu {
     position: fixed;
@@ -22,6 +46,9 @@
     background-color: transparent;
     transform: translateX(200%);
     transition: background-color 0.3s ease-in-out;
+    @media (min-width: s.$MinWidth) {
+      display: none;
+    }
     ul {
       margin: 0;
       list-style-type: none;
@@ -33,15 +60,17 @@
       gap: 2rem;
       transform: translateX(200%);
       transition: transform 0.6s ease-in-out;
-      .close-btn {
-        background-color: transparent;
-        border: none;
-        align-self: end;
-        width: fit-content;
-        margin-top: 0.5rem;
-        margin-bottom: 6rem;
-      }
       li {
+        &:has(> button.close-btn) {
+          align-self: end;
+        }
+        .close-btn {
+          background-color: transparent;
+          border: none;
+          width: fit-content;
+          margin-top: 0.5rem;
+          margin-bottom: 6rem;
+        }
         a {
           font-size: 1.3rem;
           font-weight: 400;

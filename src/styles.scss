@@ -4,6 +4,8 @@
 
 $Mobile: 375px;
 $Desktop: 1440px;
+// $MinWidth: 1090px;
+$MinWidth: 815px;
 
 // ## Colors
 // ### Primary
@@ -28,8 +30,20 @@ body {
   font-style: normal;
   font-size: 15px;
   background-color: $OffWhite;
+  @media (min-width: $MinWidth) {
+    height: 100%;
+  }
 }
 body {
   margin: 0;
   overflow-x: hidden;
+  app-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    @media (min-width: $MinWidth) {
+    }
+  }
 }

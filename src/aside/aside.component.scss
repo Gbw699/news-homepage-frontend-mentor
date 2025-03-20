@@ -5,6 +5,10 @@
   color: s.$GrayishBlue;
   padding: 1.5rem 1rem;
   margin: 5rem 1rem 0 1rem;
+  @media (min-width: s.$MinWidth) {
+    height: 442px;
+    margin: 2rem 1rem 0 1rem;
+  }
   .title {
     font-weight: 700;
     margin: 0;
@@ -24,5 +28,14 @@
   hr {
     border-color: s.$GrayishBlue;
     margin: 2rem 0;
+    @media (min-width: s.$MinWidth) {
+      margin: 0.5rem 0;
+    }
+    @media (min-width: (s.$MinWidth + 50px)) {
+      margin: 1rem 0;
+    }
+    @media (min-width: (s.$MinWidth + 200px)) {
+      margin: 2rem 0;
+    }
   }
 }
