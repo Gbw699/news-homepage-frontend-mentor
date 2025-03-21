@@ -5,6 +5,11 @@
   z-index: 1;
   display: flex;
   justify-content: space-between;
+  a {
+    &:focus-within {
+      outline-color: s.$SoftRed;
+    }
+  }
   .desktop-menu {
     display: none;
     ul {
@@ -16,6 +21,14 @@
         a {
           color: s.$DarkGrayishBlue;
           text-decoration: none;
+          transition: color 0.2s;
+          &:hover {
+            color: s.$SoftRed;
+          }
+          &:focus-within {
+            color: s.$SoftRed;
+            outline: none;
+          }
         }
       }
     }

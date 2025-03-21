@@ -24,10 +24,22 @@
       margin: 0;
       font-weight: 800;
     }
-    .sub-title {
-      color: s.$VeryDarkBlue;
+    h3 {
       margin: 0;
-      font-weight: 800;
+      .sub-title {
+        color: s.$VeryDarkBlue;
+        font-weight: 800;
+        text-decoration: none;
+        transition: color 0.2s;
+        &:hover {
+          cursor: pointer;
+          color: s.$SoftRed;
+        }
+        &:focus-within {
+          color: s.$SoftRed;
+          outline: none;
+        }
+      }
     }
     .text {
       color: s.$DarkGrayishBlue;

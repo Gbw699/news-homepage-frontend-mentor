@@ -52,6 +52,17 @@
       background-color: s.$SoftRed;
       border: none;
       padding: 1rem 2rem;
+      transition: color 0.2s, background-color 0.2s;
+      &:hover {
+        cursor: pointer;
+        color: s.$OffWhite;
+        background-color: s.$VeryDarkBlue;
+      }
+      &:focus-within {
+        color: s.$OffWhite;
+        background-color: s.$VeryDarkBlue;
+        outline: none;
+      }
     }
   }
 }

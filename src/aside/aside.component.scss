@@ -15,10 +15,22 @@
     margin-bottom: 2rem;
     color: s.$SoftOrange;
   }
-  .sub-title {
-    font-weight: 700;
+  h3 {
     margin: 0;
-    color: s.$OffWhite;
+    .sub-title {
+      font-weight: 700;
+      color: s.$OffWhite;
+      text-decoration: none;
+      transition: color 0.2s;
+      &:hover {
+        cursor: pointer;
+        color: s.$SoftOrange;
+      }
+      &:focus-within {
+        color: s.$SoftOrange;
+        outline: none;
+      }
+    }
   }
   .text {
     margin: 0;
